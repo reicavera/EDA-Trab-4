@@ -19,14 +19,15 @@ struct arv{
 	int qtd;
 };
 typedef struct arv arv;
-exibir_nivel(arv* a,int i);//Exibe os nós de i-ésimo nível da árvore a.
-busca(arv* a,int id);//Retorna o nó de chave id na árvore a ou NULL caso não exista tal nó.
-remove_no(arv* a,int id);//Remove o nó com chave id.
-insere(arv* a,int id,int op,int val);//insere na árvore um nó com os parâmetros dados.Caso
+void exibir_nivel(arv* a,int i);//Exibe os nós de i-ésimo nível da árvore a.
+no* busca(arv* a,int id);//Retorna o nó de chave id na árvore a ou NULL caso não exista tal nó.
+void remove_no(arv* a,int id);//Remove o nó com chave id.
+void insere(arv* a,int id,int op,int val);//insere na árvore um nó com os parâmetros dados.Caso
 //o nó ja exista,suas informações apenas são alteradas.
-crescente(arv* a);//Exibe os nós com ordem crescente de chave.
-decrescente(arv* a);//Exibe os nós com ordem decrescente de chave.
-remove_raiz(arv* a);//Remove e exibe a raiz da árvore. 
-arv_h(arv* a);//Retorna a altura da árvore.
+void crescente(arv* a);//Exibe os nós com ordem crescente de chave.
+void decrescente(arv* a);//Exibe os nós com ordem decrescente de chave.
+void remove_raiz(arv* a);//Remove e exibe a raiz da árvore. 
+int arv_h(arv* a);//Retorna a altura da árvore.
+int num_clientes(arv* a)//Retorna a quantidade de nós na árvore
 
-#endif
+#endif 
