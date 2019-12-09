@@ -1,9 +1,8 @@
-main:	main.o avl.o
-	gcc	main.o	avl.o	main	-Wall	-Wextra	-Werror	Wpedantic	-lm
-main.o:	main.c
-	gcc	-c	main.c	-o	main.o	-Wall	-Wextra	-Werror	Wpedantic
+a.out: avl.o
+    gcc -Wall -Wextra -Werror -Wpedantic  main.c avl.o
+
 avl.o: avl.c
-	gcc	-c	avl.c -o avl.o	-Wall	-Wextra	-Werror	Wpedantic
+    gcc -Wall -Wextra -Werror -Wpedantic -c avl.c -o avl.o
 clear:
-	rm -rf *.o
-mrproper:	clean
+    rm -rf *.o
+mrproper:    clean
